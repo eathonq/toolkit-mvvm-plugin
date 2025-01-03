@@ -1,0 +1,43 @@
+{
+    "$schema": "./@types/schema/package/index.json",
+    "package_version": 2,
+    "name": "toolkit-mvvm-plugin",
+    "version": "1.0.0",
+    "author": "vangagh@live.cn",
+    "editor": ">=3.8.5",
+    "scripts": {
+        "preinstall": "node ./scripts/preinstall.js",
+        "build": "tsc",
+        "watch": "tsc -w"
+    },
+    "description": "i18n:toolkit-mvvm.description",
+    "main": "./dist/main.js",
+    "devDependencies": {
+        "@cocos/creator-types": "^3.8.5",
+        "@types/node": "^18.17.1",
+        "typescript": "^4.3.4"
+    },
+    "contributions": {
+        "menu": [
+            {
+                "path": "i18n:toolkit-mvvm",
+                "label": "i18n:toolkit-mvvm.show_log",
+                "message": "show-log"
+            }
+        ],
+        "messages": {
+            "show-log": {
+                "methods": [
+                    "showLog"
+                ]
+            }
+        },
+        "asset-db": {
+            "mount": {
+                "path": "./assets",
+                "readonly": true,
+                "visible": true
+            }
+        }
+    }
+}
